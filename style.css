@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Russo+One&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./assets/pexels-felix-mittermeier-956999.jpg);
+    background-size: cover;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav{
+    background-color: #5c2f91;
+    color: white;
+    height: 50px;
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    padding: 0px 5px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.gamecontainer{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container{
+      display: grid;
+      grid-template-columns: repeat(3,10vw);
+      grid-template-rows:repeat(3,10vw) ;
+      color: white;
+      position: relative;
+    
+}
+
+.box{
+    border: solid white;
+    font-size: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+}
+
+.box:hover{
+    backdrop-filter: blur(2px);
+}
+
+.gameinfo{
+    padding: 0px 50px;
+    color: white;
+    font-family: 'Barrio', cursive;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0px;
+}
+
+.bl-0{
+    border-left: 0px;
+}
+
+.bt-0{
+    border-top: 0px;
+}
+
+.bb-0{
+    border-bottom: 0px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.info{
+    font-size: 30px;
+    font-family: cursive;
+    margin-top: 20px;
+  
+}
+
+#reset{
+    padding: 10px;
+    background-color: #e5f1f3;
+    border-radius: 22px;
+    font-family: 'Russo One';
+    font-size: medium;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #5c2f91;
+    height: auto;
+    width: 100vw;
+    padding-top: 15px;
+    color: #fff;
+
+    
+}
+
+footer ul{
+    
+        list-style-type: none;
+    
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family:sans-serif;
+    
+}
+
+/* Added media queries for responsive */
+@media screen and (max-width:911px) {
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 20px;
+    }
+    .gameinfo h1{
+        font-family: cursive;
+        font-size: 1.8rem;
+       
+    }
+    .container{
+        grid-template-columns: repeat(3,17vw);
+        grid-template-rows: repeat(3,17vw);
+    }   
+}
+
+/* Adding line effect */
+.line{
+   background-color: #c6a5ed;
+    height: 3px;
+    width: 0vw;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+#off{
+    padding: 5px;
+    background-color: #adc0e9;
+    border-radius: 30px;
+    font-family: 'Russo One';
+    font-size: medium;
+    margin-left: 30px;
+    cursor: pointer;
+    
+}
+#on{
+    padding: 5px;
+    background-color: #adc0e9;
+    border-radius: 30px;
+    font-family: 'Russo One';
+    font-size: medium;
+    margin-left: 5px;
+    cursor: pointer;
+}
